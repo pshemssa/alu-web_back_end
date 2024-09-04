@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-''' async function
+'''Task 3
 '''
-
 import asyncio
 
 
