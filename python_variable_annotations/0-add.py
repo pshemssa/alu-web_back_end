@@ -1,3 +1,5 @@
-a: float = 5
-b: float = 4
- return a + b
+def add(a: float,b: float) -> double
+
+return a + b
+
+sum: add(3.6, 2.8)
