@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+""" 2. measure runtime
+"""
 
 import asyncio
 from time import perf_counter
