@@ -8,6 +8,12 @@ from flask_babel import Babel
 app = Flask(__name__)
 babel = Babel(app)
 
+
+
+@app.route('/')
+def index():
+    return render_template('1-index.html')
+
 class config:
  """CONFIG CLASS"""
   
@@ -16,10 +22,6 @@ class config:
  Babel_default_timezone = 'UTC'
 
 app.config.from_object(config)
-
-@app.route('/')
-def index():
-    return render_template('1-index.html')
 
 if __name__ == '__main__':
     app.run()
