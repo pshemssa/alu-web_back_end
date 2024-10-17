@@ -12,16 +12,20 @@ babel = Babel(app)
 
 @app.route('/')
 def index():
+    """index"""
     return render_template('1-index.html')
 
+
 class Config:
- """CONFIG CLASS"""
+    """CONFIG CLASS"""
   
- LANGUAGES=["en", "fr"]
- BABEL_DEFAULT_LOCALE = 'en'
- BABEL_DEFAULT_TIMEZONE = 'UTC'
+    LANGUAGES=["en", "fr"]
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC'
+
 
 app.config.from_object(Config)
+
 
 if __name__ == '__main__':
     app.run()
