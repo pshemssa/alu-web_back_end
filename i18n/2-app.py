@@ -3,18 +3,19 @@
 """Basic Flask app"""
 
 from flask import Flask, render_template
+from flask_babel import Babel
 
 app = Flask(__name__)
-Babel = babel(app)
+babel = Babel(app)
 
-class config:
+class Config:
  """CONFIG CLASS"""
   
  LANGUAGES=["en", "fr"]
- Babel_default_locale = 'en'
- Babel_default_timezone = 'UTC'
+ BABEL_DEFAULT_LOCALE = 'en'
+ BABEL_DEFAULT_TIMEZONE = 'UTC'
 
-app.config.from_object(config)
+app.config.from_object(Config)
 
 @app.route('/')
 def index():
