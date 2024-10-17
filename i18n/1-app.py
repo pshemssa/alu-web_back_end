@@ -14,7 +14,7 @@ babel = Babel(app)
 def index():
     return render_template('1-index.html')
 
-class config:
+class Config:
  """CONFIG CLASS"""
   
  LANGUAGES=["en", "fr"]
