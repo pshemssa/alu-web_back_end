@@ -5,7 +5,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-Babel = __import__('1-app').babel
+babel = Babel(app)
 
 class config:
  """CONFIG CLASS"""
