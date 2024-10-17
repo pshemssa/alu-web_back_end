@@ -9,7 +9,6 @@ app = Flask(__name__)
 babel = Babel(app)
 
 
-
 @app.route('/')
 def index():
     """index"""
@@ -18,8 +17,8 @@ def index():
 
 class Config:
     """CONFIG CLASS"""
-  
-    LANGUAGES=["en", "fr"]
+
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
