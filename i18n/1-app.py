@@ -21,7 +21,7 @@ class Config:
  Babel_default_locale = 'en'
  Babel_default_timezone = 'UTC'
 
-app.config.from_object(config)
+app.config.from_object(Config)
 
 if __name__ == '__main__':
     app.run()
