@@ -1,3 +1,4 @@
+-- creating a trigger that reduce quantity of orders --
 create Trigger decreases 
 AFTER insert on orders
 for each row 
