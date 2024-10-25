@@ -2,14 +2,7 @@
 
 DELIMITER $$
 
-create Trigger if not exists decreases 
-AFTER insert on orders
-for each row 
-begin 
-update items
+create Trigger decreases AFTER INSERT ON orders
+for each row update items
 set quantity = quantity - new.number
 where name = new.item_name
-
-end $$
-
-DELIMITER;
