@@ -1,7 +1,8 @@
 -- creating a trigger that reduce quantity of orders --
 
 DELIMITER $$
-create Trigger decreases 
+
+create Trigger if not exists decreases 
 AFTER insert on orders
 for each row 
 begin 
@@ -10,4 +11,5 @@ set quantity = quantity - new.number
 where name = new.item_name
 
 end $$
+
 DELIMITER;
